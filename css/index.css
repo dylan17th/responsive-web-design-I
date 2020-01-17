@@ -1,3 +1,225 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+	overflow-x: hidden;
+	margin: 1%;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+/*starting from the top of the page and working my way down*/
+
+/*this is the start of the nav bar styles*/
+.navcontainer{
+    display: flex;
+    justify-content: space-evenly;
+	align-items: center;
+	
+}
+/*these are the nav items in the top flex container*/
+.box{
+  justify-content: center;
+  padding: 2%;
+  text-decoration: none;
+  color:grey;   
+}
+/*this is for the nav items to change color when you hover over top of them */
+.box:hover{
+  color:black;
+
+}
+/*this fades the logo button in the nav bar. I did this because iI made this a clickable item on the nav bar*/
+.box10:hover{
+  opacity: 0.4;
+}
+
+h1{
+	font-size: 100px;
+	text-align: center;
+
+}
+.main-title{
+	display:flex;
+	justify-content: space-evenly;
+	border-bottom: black 2px solid;
+	padding-bottom: 8vh;
+	padding-top: 5vh;
+	align-items: center;
+	align-content: center;
+}
+.button{
+	border: black solid 2px;
+	font-size: 30px;
+	text-align: center;
+	width:260px;
+	margin-left: 7.5vh;
+	padding:1vh;
+	margin-top: 2vh;
+}
+
+.button:hover{
+	background-color:lightgrey;
+}
 
 
+/*this is the big circle photo style*/
+.mid{
+	width: 500px;
+	height:500px;
+}
+
+/*this is the start of the main content section. these styles are for the 5 sections elements and the big photo*/
+/*styling for the top two sections about the photo*/
+.maincontent {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding:5vh;
+	line-height: 150%;
+	align-items: center;	
+	border-bottom: solid black 2px;
+}
+/*this is the default selector for all three, but controls the width for only the top two sections*/
+.boxes{
+	width:50%;
+	padding: 3vh 1vh;
+}
+/*this controls the images width making the entire width of the page*/
+.middle-img{
+	width:160vh;
+}
+/* this controls the bottom boxes width*/
+.services, .product, .vision{
+	width: 33%;
+}
+
+ /*this is the start of the styling for the footer element*/
+
+ .footer{
+margin-top: 5vh;
+margin-left: 8vh;
+}
+
+address{
+	line-height: 130%;
+}
+
+.phone, .copy{
+	line-height: 170%;
+}
+.copy{
+	text-align: center;
+	padding-bottom: 10vh;
+	padding-top: 5vh;
+	margin-right: 8vh;
+}
+/*This is the start of the tablet design*/
+@media (max-width:800px){
+    /*This takes the big picture off of the page*/
+    .box33{
+        display:none;
+    }
+    /*This lines the button up better with the big title*/
+    .button{
+        margin-left: 8.5vh;
+    }
+    
+    .navcontainer{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    /*These next two boxes change the logo from first to last*/
+    .box{
+        order:999;
+        text-align: center;
+        
+    }
+    .box10{
+        order:1;
+        width: 100%;
+
+    }
+    .maincontent{
+        justify-content: space-evenly;
+        padding: 1vh;
+    }
+}
+@media (max-width:500px){
+   .box{
+       padding:2vh;
+   }
+   .maincontent{
+       flex-wrap: wrap;
+   }
+   .box1{
+       width:100%;
+       border-bottom: grey 1px solid;
+   }
+   .box12{
+       border-top: grey solid 1px;;
+
+   }
+  .boxes{
+      width:100%
+  }
+}
